@@ -1,5 +1,7 @@
 package com.example.interviewquestionsandanswers;
 
+import com.example.interviewquestionsandanswers.SetAndHashSet.SetExample;
+import com.example.interviewquestionsandanswers.SetAndHashSet.TreeSetExample;
 import com.example.interviewquestionsandanswers.abstractVsInterface.*;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.ArrayListExample;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.LinkedListExample;
@@ -8,8 +10,7 @@ import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.*;
 
 @SpringBootApplication
 public class InterviewQuestionsAndAnswersApplication {
@@ -88,6 +89,37 @@ public class InterviewQuestionsAndAnswersApplication {
         mapsExample.getEmpId().replace("John", 7777);
         System.out.println(mapsExample.getEmpIdMap());
 
+        SetExample setExample = new SetExample();
+        setExample.getNamesSet().add("John");
+        setExample.getNamesSet().add("Walter");
+        setExample.getNamesSet().add("Skyler");
+        setExample.getNamesSet().add("Mike");
+
+        setExample.getNamesSet().remove("Walter");
+        System.out.println(setExample.getNamesSet());
+
+//        setExample.getNamesSet().forEach(System.out::println);
+//        setExample.getNamesSet().iterator();
+
+        Iterator<String> nameIterator = setExample.getNamesSet().iterator();
+        while (nameIterator.hasNext()) {
+            System.out.println(nameIterator.next());
+        }
+
+        setExample.getNumberList().add(1);
+        setExample.getNumberList().add(2);
+        setExample.getNumberList().add(3);
+        setExample.getNumberList().add(3);
+        setExample.getNumberList().add(2);
+
+        System.out.println(setExample.getNumberList());
+
+        Set<Integer> numberSet = new HashSet<>();
+        numberSet.addAll(setExample.getNumberList());
+        System.out.println(numberSet);
+
+        // treeSet gives natural order
+        // LinkedHashSet gives insertion order
     }
 
     public void sayHelloWorld() {
