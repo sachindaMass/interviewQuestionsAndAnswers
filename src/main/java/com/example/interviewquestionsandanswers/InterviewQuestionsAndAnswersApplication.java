@@ -3,6 +3,7 @@ package com.example.interviewquestionsandanswers;
 import com.example.interviewquestionsandanswers.abstractVsInterface.*;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.ArrayListExample;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.LinkedListExample;
+import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
 import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -73,6 +74,19 @@ public class InterviewQuestionsAndAnswersApplication {
         arrayListExample.getNameArrayList().add("Ringo");
         arrayListExample.getNameArrayList().add(1, "Jerry");
         System.out.println(arrayListExample.getNameArrayList().get(2));
+
+        MapsExample mapsExample = new MapsExample();
+        mapsExample.getEmpId().put("John", 12345);
+        mapsExample.getEmpId().put("Carl", 54321);
+        mapsExample.getEmpId().put("Jerry", 876969);
+
+        System.out.println(mapsExample.getEmpIdMap());
+        System.out.println(mapsExample.getEmpIdMap().get("Carl"));
+        System.out.println(mapsExample.getEmpId().containsKey("John"));
+        System.out.println(mapsExample.getEmpIdMap().containsValue(5));
+
+        mapsExample.getEmpId().replace("John", 7777);
+        System.out.println(mapsExample.getEmpIdMap());
 
     }
 
