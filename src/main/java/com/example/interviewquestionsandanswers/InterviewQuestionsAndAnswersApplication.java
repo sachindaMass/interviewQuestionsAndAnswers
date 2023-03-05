@@ -7,6 +7,8 @@ import com.example.interviewquestionsandanswers.arrayListAndLinkedList.LinkedLis
 import com.example.interviewquestionsandanswers.lambdaExample.Cat;
 import com.example.interviewquestionsandanswers.lambdaExample.Printable;
 import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
+import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExample;
+import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExmple2;
 import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -126,15 +128,28 @@ public class InterviewQuestionsAndAnswersApplication {
 //        myCat.print();
 //        printThing(myCat); // insted of myCat.print()
 
-        Printable lambdaPrintable = (p,s) -> System.out.println("Meow" + s);
+        Printable lambdaPrintable = (p, s) -> System.out.println("Meow" + s);
         printThing(lambdaPrintable); //lambda expression
-        printThing((p,s) -> {
+        printThing((p, s) -> {
             System.out.println("Meow");
         }); //Lambda expression
+
+        for (int i = 0; i <= 5; i++) {
+            MultiThreadExample myExample = new MultiThreadExample(i);
+            MultiThreadExmple2 myExample2 = new MultiThreadExmple2(i);
+            myExample.start();
+            Thread myThread = new Thread(myExample2);
+            myThread.start();
+        }
+//        throw new RuntimeException();
+//        MultiThreadExample myExample2 = new MultiThreadExample();
+//        myExample.start(); //multiple concerent from start
+//        myExample2.start();
+//        myExample2.run(); // run allows to run thread one after another
     }
 
     static void printThing(Printable thing) {
-        thing.print("!","!");
+        thing.print("!", "!");
     }
 
     public void sayHelloWorld() {
