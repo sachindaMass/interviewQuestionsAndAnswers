@@ -1,5 +1,7 @@
 package com.example.interviewquestionsandanswers;
 
+import com.example.interviewquestionsandanswers.ExceptionHandling.ExceptionHandling;
+import com.example.interviewquestionsandanswers.ExceptionHandling.PrintNumberException;
 import com.example.interviewquestionsandanswers.SetAndHashSet.SetExample;
 import com.example.interviewquestionsandanswers.abstractVsInterface.*;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.ArrayListExample;
@@ -46,6 +48,12 @@ public class InterviewQuestionsAndAnswersApplication {
 //        finalKeyWord();
 //
 //        OuterClassAndInnerClass();
+
+        ExceptionHandling exceptionHandling = new ExceptionHandling();
+        exceptionHandling.numberFormatExceptionCheck();
+
+        PrintNumberException printNumberException = new PrintNumberException();
+        printNumberException.printNumber();
 
     }
 
