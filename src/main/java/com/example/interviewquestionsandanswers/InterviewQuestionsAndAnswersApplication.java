@@ -20,65 +20,54 @@ public class InterviewQuestionsAndAnswersApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(InterviewQuestionsAndAnswersApplication.class, args);
-        Wrestler wrestler1 = new Kane();
-        Wrestler wrestler2 = new StoneCold();
 
-        wrestler1.themeMusic();
-        wrestler1.finisher();
-        wrestler1.paymentForWork(5);
+        abstractAndInterface();
 
-        wrestler2.themeMusic();
-        wrestler2.finisher();
-        wrestler2.paymentForWork(3);
+        staticAndNonStatic();
 
-        WrestlerInterface wrestlerInterface = new StoneColdInter();
+        linkedListMethod();
 
-        wrestlerInterface.themeMusic();
-        wrestlerInterface.finisher();
-        wrestlerInterface.paymentForWork(10);
+        arrayListMethod();
 
-        Book mythicalManMonth = new Book(); // create and instance of Book class
-        Book.getPublisher();// legal to call static method directly from the class
-        Book.getPublisher(); // legal to call static method form and "instance of a class"
+        mapsAndHashMapsAndTrees();
 
-//        Book.getTitle(); not legal to call  non-static method direction from the class
-        mythicalManMonth.getTitle(); // legal to call non-static method from and instance of class.
+        lambdaExpression();
 
-//        sayHelloWorld(); not legal to call non-static method direction from a static method.
+        multiThreadingMethod();
+    }
 
-        InterviewQuestionsAndAnswersApplication interviewQuestionsAndAnswersApplication
-                = new InterviewQuestionsAndAnswersApplication(); // create an instance of the library class.
-        interviewQuestionsAndAnswersApplication.sayHelloWorld(); // legal to call a non-static method from an instance
-        // of a class.
+    private static void multiThreadingMethod() {
+        for (int i = 0; i <= 5; i++) {
+            MultiThreadExample myExample = new MultiThreadExample(i);
+            MultiThreadExmple2 myExample2 = new MultiThreadExmple2(i);
+            myExample.start();
+            Thread myThread = new Thread(myExample2);
+            myThread.start();
+        }
+//        throw new RuntimeException();
+//        MultiThreadExample myExample2 = new MultiThreadExample();
+//        myExample.start(); //multiple concurrent from start
+//        myExample2.start();
+//        myExample2.run(); // run allows to run thread one after another
 
-        LinkedListExample linkedListExample = new LinkedListExample() {
-            @Override
-            public LinkedList<String> getNameLinkedList() {
-                return super.getNameLinkedList();
-            }
-        };
+//        ----------------------------------------------------------------------------------------
+    }
 
-        linkedListExample.getNameLinkedList().add("John");
-        linkedListExample.getNameLinkedList().add("Paul");
-        linkedListExample.getNameLinkedList().add("George");
-        linkedListExample.getNameLinkedList().add("Ringo");
-        linkedListExample.getNameLinkedList().add(1, "Jerry");
-        System.out.println(linkedListExample.getNameLinkedList().get(2));
+    private static void lambdaExpression() {
+        Cat myCat = new Cat();
+//        myCat.print();
+//        printThing(myCat); // insted of myCat.print()
 
-        ArrayListExample arrayListExample = new ArrayListExample() {
-            @Override
-            public ArrayList<String> getNameArrayList() {
-                return super.getNameArrayList();
-            }
-        };
+        Printable lambdaPrintable = (p, s) -> System.out.println("Meow" + s);
+        printThing(lambdaPrintable); //lambda expression
+        printThing((p, s) -> {
+            System.out.println("Meow");
+        }); //Lambda expression
 
-        arrayListExample.getNameArrayList().add("John");
-        arrayListExample.getNameArrayList().add("Paul");
-        arrayListExample.getNameArrayList().add("George");
-        arrayListExample.getNameArrayList().add("Ringo");
-        arrayListExample.getNameArrayList().add(1, "Jerry");
-        System.out.println(arrayListExample.getNameArrayList().get(2));
+//        ----------------------------------------------------------------------------------------
+    }
 
+    private static void mapsAndHashMapsAndTrees() {
         MapsExample mapsExample = new MapsExample();
         mapsExample.getEmpId().put("John", 12345);
         mapsExample.getEmpId().put("Carl", 54321);
@@ -124,28 +113,82 @@ public class InterviewQuestionsAndAnswersApplication {
         // treeSet gives natural order
         // LinkedHashSet gives insertion order
 
-        Cat myCat = new Cat();
-//        myCat.print();
-//        printThing(myCat); // insted of myCat.print()
+//        ----------------------------------------------------------------------------------------
+    }
 
-        Printable lambdaPrintable = (p, s) -> System.out.println("Meow" + s);
-        printThing(lambdaPrintable); //lambda expression
-        printThing((p, s) -> {
-            System.out.println("Meow");
-        }); //Lambda expression
+    private static void arrayListMethod() {
+        ArrayListExample arrayListExample = new ArrayListExample() {
+            @Override
+            public ArrayList<String> getNameArrayList() {
+                return super.getNameArrayList();
+            }
+        };
 
-        for (int i = 0; i <= 5; i++) {
-            MultiThreadExample myExample = new MultiThreadExample(i);
-            MultiThreadExmple2 myExample2 = new MultiThreadExmple2(i);
-            myExample.start();
-            Thread myThread = new Thread(myExample2);
-            myThread.start();
-        }
-//        throw new RuntimeException();
-//        MultiThreadExample myExample2 = new MultiThreadExample();
-//        myExample.start(); //multiple concerent from start
-//        myExample2.start();
-//        myExample2.run(); // run allows to run thread one after another
+        arrayListExample.getNameArrayList().add("John");
+        arrayListExample.getNameArrayList().add("Paul");
+        arrayListExample.getNameArrayList().add("George");
+        arrayListExample.getNameArrayList().add("Ringo");
+        arrayListExample.getNameArrayList().add(1, "Jerry");
+        System.out.println(arrayListExample.getNameArrayList().get(2));
+
+//        ----------------------------------------------------------------------------------------
+    }
+
+    private static void linkedListMethod() {
+        InterviewQuestionsAndAnswersApplication interviewQuestionsAndAnswersApplication
+                = new InterviewQuestionsAndAnswersApplication(); // create an instance of the library class.
+        interviewQuestionsAndAnswersApplication.sayHelloWorld(); // legal to call a non-static method from an instance
+        // of a class.
+
+        LinkedListExample linkedListExample = new LinkedListExample() {
+            @Override
+            public LinkedList<String> getNameLinkedList() {
+                return super.getNameLinkedList();
+            }
+        };
+
+        linkedListExample.getNameLinkedList().add("John");
+        linkedListExample.getNameLinkedList().add("Paul");
+        linkedListExample.getNameLinkedList().add("George");
+        linkedListExample.getNameLinkedList().add("Ringo");
+        linkedListExample.getNameLinkedList().add(1, "Jerry");
+        System.out.println(linkedListExample.getNameLinkedList().get(2));
+
+//        ----------------------------------------------------------------------------------------
+    }
+
+    private static void staticAndNonStatic() {
+        //        ----------------------------------------------------------------------------------------
+
+        Book mythicalManMonth = new Book(); // create and instance of Book class
+        Book.getPublisher();// legal to call static method directly from the class
+        Book.getPublisher(); // legal to call static method form and "instance of a class"
+
+//        Book.getTitle(); not legal to call  non-static method direction from the class
+        mythicalManMonth.getTitle(); // legal to call non-static method from and instance of class.
+
+//        sayHelloWorld(); not legal to call non-static method direction from a static method.
+
+//        ----------------------------------------------------------------------------------------
+    }
+
+    private static void abstractAndInterface() {
+        Wrestler wrestler1 = new Kane();
+        Wrestler wrestler2 = new StoneCold();
+
+        wrestler1.themeMusic();
+        wrestler1.finisher();
+        wrestler1.paymentForWork(5);
+
+        wrestler2.themeMusic();
+        wrestler2.finisher();
+        wrestler2.paymentForWork(3);
+
+        WrestlerInterface wrestlerInterface = new StoneColdInter();
+
+        wrestlerInterface.themeMusic();
+        wrestlerInterface.finisher();
+        wrestlerInterface.paymentForWork(10);
     }
 
     static void printThing(Printable thing) {
