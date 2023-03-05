@@ -1,9 +1,6 @@
 package com.example.interviewquestionsandanswers;
 
-import com.example.interviewquestionsandanswers.ExceptionHandling.AgeLessThanZeroException;
-import com.example.interviewquestionsandanswers.ExceptionHandling.CustomException;
-import com.example.interviewquestionsandanswers.ExceptionHandling.ExceptionHandling;
-import com.example.interviewquestionsandanswers.ExceptionHandling.PrintNumberException;
+import com.example.interviewquestionsandanswers.ExceptionHandling.*;
 import com.example.interviewquestionsandanswers.SetAndHashSet.SetExample;
 import com.example.interviewquestionsandanswers.abstractVsInterface.*;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.ArrayListExample;
@@ -54,7 +51,19 @@ public class InterviewQuestionsAndAnswersApplication {
 //        exceptionHandling();
 //
 //        customException();
+//
+//        nullPointExceptionStuff();
 
+    }
+
+    private static void nullPointExceptionStuff() {
+        NullPointerExceptionStuff nullPointerExceptionStuff = new NullPointerExceptionStuff();
+        nullPointerExceptionStuff.myCat();
+        nullPointerExceptionStuff.booleanNullCheck();
+        nullPointerExceptionStuff.listNullCheck();
+        nullPointerExceptionStuff.getFirstCatNameLength(nullPointerExceptionStuff.listCats());
+        nullPointerExceptionStuff.getCats();
+        nullPointerExceptionStuff.listCats();
     }
 
     private static void customException() throws AgeLessThanZeroException {
