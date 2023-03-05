@@ -44,7 +44,20 @@ public class InterviewQuestionsAndAnswersApplication {
 //        superKeyWord();
 //
 //        finalKeyWord();
+//
+//        OuterClassAndInnerClass();
 
+    }
+
+    private static void OuterClassAndInnerClass() {
+        OuterClass outer = new OuterClass();
+        outer.heyThere();
+
+        OuterClass.InnerClass innerClass = outer.new InnerClass(); //without making inner class static
+        innerClass.whatsUp();
+
+        InnerClassWithStatic innerClassWithStatic = new InnerClassWithStatic();
+        innerClassWithStatic.whatsUp();
     }
 
     private static void finalKeyWord() {
