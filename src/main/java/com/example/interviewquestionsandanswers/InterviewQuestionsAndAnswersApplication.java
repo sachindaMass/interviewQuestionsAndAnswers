@@ -1,5 +1,7 @@
 package com.example.interviewquestionsandanswers;
 
+import com.example.interviewquestionsandanswers.ExceptionHandling.AgeLessThanZeroException;
+import com.example.interviewquestionsandanswers.ExceptionHandling.CustomException;
 import com.example.interviewquestionsandanswers.ExceptionHandling.ExceptionHandling;
 import com.example.interviewquestionsandanswers.ExceptionHandling.PrintNumberException;
 import com.example.interviewquestionsandanswers.SetAndHashSet.SetExample;
@@ -24,7 +26,7 @@ public class InterviewQuestionsAndAnswersApplication {
     public static final double PI_VALUE = 3.14159;
 //    private static final double PI_VALUE = 3.14159;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         SpringApplication.run(InterviewQuestionsAndAnswersApplication.class, args);
 
 //        abstractAndInterface();
@@ -48,13 +50,24 @@ public class InterviewQuestionsAndAnswersApplication {
 //        finalKeyWord();
 //
 //        OuterClassAndInnerClass();
+//
+//        exceptionHandling();
+//
+//        customException();
 
+    }
+
+    private static void customException() throws AgeLessThanZeroException {
+        CustomException customException = new CustomException();
+        customException.validateAge(-1);
+    }
+
+    private static void exceptionHandling() {
         ExceptionHandling exceptionHandling = new ExceptionHandling();
         exceptionHandling.numberFormatExceptionCheck();
 
         PrintNumberException printNumberException = new PrintNumberException();
         printNumberException.printNumber();
-
     }
 
     private static void OuterClassAndInnerClass() {
