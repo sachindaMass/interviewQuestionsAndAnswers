@@ -19,6 +19,9 @@ import java.util.*;
 @SpringBootApplication
 public class InterviewQuestionsAndAnswersApplication {
 
+    public static final double PI_VALUE = 3.14159;
+//    private static final double PI_VALUE = 3.14159;
+
     public static void main(String[] args) {
         SpringApplication.run(InterviewQuestionsAndAnswersApplication.class, args);
 
@@ -39,8 +42,23 @@ public class InterviewQuestionsAndAnswersApplication {
 //        thisKeyword();
 //
 //        superKeyWord();
+//
+//        finalKeyWord();
 
+    }
 
+    private static void finalKeyWord() {
+        com.example.interviewquestionsandanswers.finalKeyWord.Dog dog
+                = new com.example.interviewquestionsandanswers.finalKeyWord.Dog
+                ("Bella", "White", 5);
+//        final com.example.interviewquestionsandanswers.finalKeyWord.Dog myDog
+//                = new com.example.interviewquestionsandanswers.finalKeyWord.Dog(5); // final Dog class
+        dog.eat();
+        System.out.println(dog.getName() + " " + dog.getColor() + " " + dog.getWalkDistancePreference());
+
+//        final double pi = 3.14159; // it never changed
+
+        System.out.println(PI_VALUE * 3);
     }
 
     private static void superKeyWord() {
