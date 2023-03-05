@@ -10,6 +10,7 @@ import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExmple2;
 import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
+import com.example.interviewquestionsandanswers.thisKeyword.Dog;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -21,19 +22,39 @@ public class InterviewQuestionsAndAnswersApplication {
     public static void main(String[] args) {
         SpringApplication.run(InterviewQuestionsAndAnswersApplication.class, args);
 
-        abstractAndInterface();
+//        abstractAndInterface();
+//
+//        staticAndNonStatic();
+//
+//        linkedListMethod();
+//
+//        arrayListMethod();
+//
+//        mapsAndHashMapsAndTrees();
+//
+//        lambdaExpression();
+//
+//        multiThreadingMethod();
+//
+//        thisKeyword();
+//
+//        superKeyWord();
 
-        staticAndNonStatic();
 
-        linkedListMethod();
+    }
 
-        arrayListMethod();
+    private static void superKeyWord() {
+        com.example.interviewquestionsandanswers.superKeyword.Cat cat
+                = new com.example.interviewquestionsandanswers.superKeyword.Cat
+                (5, "Shirmal", "Fish");
+        cat.makeNoise();
+        System.out.println(cat.getAge() + " " + cat.getName() + " " + cat.getCatFoodPreference());
+    }
 
-        mapsAndHashMapsAndTrees();
-
-        lambdaExpression();
-
-        multiThreadingMethod();
+    private static void thisKeyword() {
+        Dog dog = new Dog();
+        dog.setName("Bella");
+        System.out.println(dog.getName());
     }
 
     private static void multiThreadingMethod() {
@@ -198,5 +219,6 @@ public class InterviewQuestionsAndAnswersApplication {
     public void sayHelloWorld() {
         System.out.println("Hello World");
     }
+
 
 }
