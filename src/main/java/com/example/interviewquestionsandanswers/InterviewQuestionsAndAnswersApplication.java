@@ -1,10 +1,11 @@
 package com.example.interviewquestionsandanswers;
 
 import com.example.interviewquestionsandanswers.SetAndHashSet.SetExample;
-import com.example.interviewquestionsandanswers.SetAndHashSet.TreeSetExample;
 import com.example.interviewquestionsandanswers.abstractVsInterface.*;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.ArrayListExample;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.LinkedListExample;
+import com.example.interviewquestionsandanswers.lambdaExample.Cat;
+import com.example.interviewquestionsandanswers.lambdaExample.Printable;
 import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
 import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
 import org.springframework.boot.SpringApplication;
@@ -120,6 +121,20 @@ public class InterviewQuestionsAndAnswersApplication {
 
         // treeSet gives natural order
         // LinkedHashSet gives insertion order
+
+        Cat myCat = new Cat();
+//        myCat.print();
+//        printThing(myCat); // insted of myCat.print()
+
+        Printable lambdaPrintable = (p,s) -> System.out.println("Meow" + s);
+        printThing(lambdaPrintable); //lambda expression
+        printThing((p,s) -> {
+            System.out.println("Meow");
+        }); //Lambda expression
+    }
+
+    static void printThing(Printable thing) {
+        thing.print("!","!");
     }
 
     public void sayHelloWorld() {
