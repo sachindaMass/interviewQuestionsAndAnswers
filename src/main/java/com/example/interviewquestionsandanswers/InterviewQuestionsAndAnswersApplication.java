@@ -6,6 +6,7 @@ import com.example.interviewquestionsandanswers.abstractVsInterface.*;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.ArrayListExample;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.LinkedListExample;
 import com.example.interviewquestionsandanswers.equalVsEquals.EqualDemo;
+import com.example.interviewquestionsandanswers.genericsExample.GenericsExample;
 import com.example.interviewquestionsandanswers.lambdaExample.Cat;
 import com.example.interviewquestionsandanswers.lambdaExample.Printable;
 import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
@@ -68,7 +69,25 @@ public class InterviewQuestionsAndAnswersApplication {
 //        stringsAreImmutable();
 //
 //        optionalStuff();
+//
+//        genericStuff();
+    }
 
+    private static void genericStuff() {
+        GenericsExample genericsExample = new GenericsExample(23);
+        genericsExample.print();
+
+        GenericsExample<Integer> genericsExample2 = new GenericsExample<Integer>(23);
+        genericsExample2.print();
+
+        GenericsExample<Double> genericsExample3 = new GenericsExample<Double>(23.5);
+        genericsExample3.print();
+
+        genericsExample3.shout("John");
+        genericsExample3.shout(57);
+
+        genericsExample3.shout1("John", 35);
+        genericsExample3.shout1(35, "John");
     }
 
     private static void optionalStuff() {
@@ -95,7 +114,7 @@ public class InterviewQuestionsAndAnswersApplication {
                 = optionalCat.orElseThrow();
 
         optionalCat.map
-                (com.example.interviewquestionsandanswers.optionalStuff.Cat :: getAge)
+                        (com.example.interviewquestionsandanswers.optionalStuff.Cat::getAge)
                 .orElse(0);
     }
 
