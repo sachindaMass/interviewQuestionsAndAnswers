@@ -17,6 +17,8 @@ import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExmple2;
 import com.example.interviewquestionsandanswers.optionalStuff.OptionalStuff;
+import com.example.interviewquestionsandanswers.recordsExamples.EmployeeClass;
+import com.example.interviewquestionsandanswers.recordsExamples.EmployeeRecord;
 import com.example.interviewquestionsandanswers.reflectionExample.Chicken;
 import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
 import com.example.interviewquestionsandanswers.stringAreImmutable.StringImmutable;
@@ -83,6 +85,17 @@ public class InterviewQuestionsAndAnswersApplication {
 //        annotationExample();
 //
 //        reflectionExample();
+//
+//        recordExample();
+    }
+
+    private static void recordExample() {
+        EmployeeClass employeeClass = new EmployeeClass("Jerry", 12345);
+        System.out.println("employeeClass.getName() = " + employeeClass.getName());
+
+        EmployeeRecord employeeRecord = new EmployeeRecord("karmer", 5456);
+        System.out.println("employeeRecord.name() = " + employeeRecord.name());
+        System.out.println("employeeRecord.nameInUpperCase() = " + employeeRecord.nameInUpperCase());
     }
 
     private static void reflectionExample() throws IllegalAccessException {
