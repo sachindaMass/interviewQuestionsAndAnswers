@@ -11,6 +11,7 @@ import com.example.interviewquestionsandanswers.lambdaExample.Printable;
 import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExmple2;
+import com.example.interviewquestionsandanswers.optionalStuff.OptionalStuff;
 import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
 import com.example.interviewquestionsandanswers.stringAreImmutable.StringImmutable;
 import com.example.interviewquestionsandanswers.thisKeyword.Dog;
@@ -65,7 +66,37 @@ public class InterviewQuestionsAndAnswersApplication {
 //        equalSignAndMarksCheck();
 //
 //        stringsAreImmutable();
+//
+//        optionalStuff();
 
+    }
+
+    private static void optionalStuff() {
+        OptionalStuff optionalStuff = new OptionalStuff();
+        optionalStuff.findCatByName("Fred");
+
+        Optional<com.example.interviewquestionsandanswers.optionalStuff.Cat> optionalCat
+                = Optional.of(new com.example.interviewquestionsandanswers.optionalStuff.Cat());
+//        if (myCat != null) {
+//            System.out.println("myCat.getAge() = " + myCat.getAge());
+//        } else {
+//            System.out.println(0);
+//        }
+//        if (optionalCat.isPresent()) {
+//            optionalCat.get().getAge();
+//        } else {
+//            System.out.println(0);
+//        }
+//        com.example.interviewquestionsandanswers.optionalStuff.Cat myCat = optionalCat.orElse
+//                (new com.example.interviewquestionsandanswers.optionalStuff.Cat
+//                        ("UNKNOWN", 0));
+
+        com.example.interviewquestionsandanswers.optionalStuff.Cat myCat
+                = optionalCat.orElseThrow();
+
+        optionalCat.map
+                (com.example.interviewquestionsandanswers.optionalStuff.Cat :: getAge)
+                .orElse(0);
     }
 
     private static void stringsAreImmutable() {
