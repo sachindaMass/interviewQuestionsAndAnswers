@@ -87,6 +87,14 @@ public class InterviewQuestionsAndAnswersApplication {
 //        reflectionExample();
 //
 //        recordExample();
+//
+//        constructMethod();
+    }
+
+    private static void constructMethod() {
+        com.example.interviewquestionsandanswers.constructorExample.Dog myDog
+                = new com.example.interviewquestionsandanswers.constructorExample.Dog("Karemer", 5);
+        System.out.println("myDog = " + myDog);
     }
 
     private static void recordExample() {
