@@ -3,6 +3,10 @@ package com.example.interviewquestionsandanswers;
 import com.example.interviewquestionsandanswers.ExceptionHandling.*;
 import com.example.interviewquestionsandanswers.SetAndHashSet.SetExample;
 import com.example.interviewquestionsandanswers.abstractVsInterface.*;
+import com.example.interviewquestionsandanswers.annotationExampls.ImportantString;
+import com.example.interviewquestionsandanswers.annotationExampls.Parrot;
+import com.example.interviewquestionsandanswers.annotationExampls.RunImmediately;
+import com.example.interviewquestionsandanswers.annotationExampls.VeryImportant;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.ArrayListExample;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.LinkedListExample;
 import com.example.interviewquestionsandanswers.equalVsEquals.EqualDemo;
@@ -21,6 +25,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.FileNotFoundException;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.*;
 
 @SpringBootApplication
@@ -71,6 +78,49 @@ public class InterviewQuestionsAndAnswersApplication {
 //        optionalStuff();
 //
 //        genericStuff();
+//
+//        annotationExample();
+    }
+
+    private static void annotationExample() throws IllegalAccessException, InvocationTargetException {
+        @SuppressWarnings("unused")
+        com.example.interviewquestionsandanswers.annotationExampls.Cat myCat
+                = new com.example.interviewquestionsandanswers.annotationExampls.Cat("Stella", 5);
+
+        Parrot parrot = new Parrot("Jerry");
+
+
+        if (myCat.getClass().isAnnotationPresent(VeryImportant.class)) {
+            System.out.println("This thing is very important");
+        } else {
+            System.out.println("This thing is not very important");
+        }
+
+        if (parrot.getClass().isAnnotationPresent(VeryImportant.class)) {
+            System.out.println("This thing is very important");
+        } else {
+            System.out.println("This thing is not very important");
+        }
+
+        for (Method method : myCat.getClass().getDeclaredMethods()) {
+            if (method.isAnnotationPresent(RunImmediately.class)) {
+                RunImmediately annotation = method.getAnnotation(RunImmediately.class);
+
+                for (int i = 0; i < annotation.times(); i++) {
+                    method.invoke(myCat);
+                }
+            }
+        }
+
+        for (Field field : myCat.getClass().getDeclaredFields()) {
+            if (field.isAnnotationPresent(ImportantString.class)) {
+                Object objectValue = field.get(myCat);
+
+                if (objectValue instanceof String stringValue) {
+                    System.out.println(stringValue.toLowerCase());
+                }
+            }
+        }
     }
 
     private static void genericStuff() {
