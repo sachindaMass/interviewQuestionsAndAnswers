@@ -1,4 +1,4 @@
-package com.example.interviewquestionsandanswers.SetAndHashSet;
+package com.example.interviewquestionsandanswers.setAndHashSet;
 
 import java.util.ArrayList;
 import java.util.HashSet;

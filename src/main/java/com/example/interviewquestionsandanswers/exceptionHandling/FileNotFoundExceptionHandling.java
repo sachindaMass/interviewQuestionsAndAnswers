@@ -1,4 +1,4 @@
-package com.example.interviewquestionsandanswers.ExceptionHandling;
+package com.example.interviewquestionsandanswers.exceptionHandling;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

@@ -1,4 +1,4 @@
-package com.example.interviewquestionsandanswers.ExceptionHandling;
+package com.example.interviewquestionsandanswers.exceptionHandling;
 
 public class Cat {
 

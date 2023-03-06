@@ -1,4 +1,4 @@
-package com.example.interviewquestionsandanswers.ExceptionHandling;
+package com.example.interviewquestionsandanswers.exceptionHandling;
 
 import java.util.ArrayList;
 import java.util.List;

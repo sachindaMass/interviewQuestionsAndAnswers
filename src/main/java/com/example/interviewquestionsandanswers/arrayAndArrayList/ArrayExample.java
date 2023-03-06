@@ -1,4 +1,4 @@
-package com.example.interviewquestionsandanswers.ArrayAndArrayList;
+package com.example.interviewquestionsandanswers.arrayAndArrayList;
 
 public class ArrayExample {
 

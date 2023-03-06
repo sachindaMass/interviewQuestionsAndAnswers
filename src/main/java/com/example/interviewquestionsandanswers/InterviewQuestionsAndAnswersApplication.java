@@ -1,7 +1,7 @@
 package com.example.interviewquestionsandanswers;
 
-import com.example.interviewquestionsandanswers.ExceptionHandling.*;
-import com.example.interviewquestionsandanswers.SetAndHashSet.SetExample;
+import com.example.interviewquestionsandanswers.exceptionHandling.*;
+import com.example.interviewquestionsandanswers.setAndHashSet.SetExample;
 import com.example.interviewquestionsandanswers.abstractVsInterface.*;
 import com.example.interviewquestionsandanswers.annotationExampls.ImportantString;
 import com.example.interviewquestionsandanswers.annotationExampls.Parrot;
