@@ -17,6 +17,7 @@ import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExmple2;
 import com.example.interviewquestionsandanswers.optionalStuff.OptionalStuff;
+import com.example.interviewquestionsandanswers.reflectionExample.Chicken;
 import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
 import com.example.interviewquestionsandanswers.stringAreImmutable.StringImmutable;
 import com.example.interviewquestionsandanswers.thisKeyword.Dog;
@@ -80,6 +81,21 @@ public class InterviewQuestionsAndAnswersApplication {
 //        genericStuff();
 //
 //        annotationExample();
+//
+//        reflectionExample();
+    }
+
+    private static void reflectionExample() throws IllegalAccessException {
+        Chicken chicken = new Chicken("Stella", 6);
+        Field[] chickenFields = chicken.getClass().getDeclaredFields();
+
+        for (Field field : chickenFields) {
+            if (field.getName().equals("name")) {
+                field.setAccessible(true);
+                field.set(chicken, "Jimmy McGill");
+            }
+        }
+        System.out.println(chicken.getName());
     }
 
     private static void annotationExample() throws IllegalAccessException, InvocationTargetException {
