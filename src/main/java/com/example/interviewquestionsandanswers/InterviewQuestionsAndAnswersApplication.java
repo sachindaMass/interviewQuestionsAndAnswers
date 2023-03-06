@@ -12,6 +12,7 @@ import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadEx
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExmple2;
 import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
 import com.example.interviewquestionsandanswers.thisKeyword.Dog;
+import com.example.interviewquestionsandanswers.upCastingAndDownCasting.Animal;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -56,7 +57,19 @@ public class InterviewQuestionsAndAnswersApplication {
 //        nullPointExceptionStuff();
 //
 //        fileNotFoundExceptionHandling();
+//
+//        upCastingDownCasing();
+    }
 
+    private static void upCastingDownCasing() {
+        Animal myAnimal = new com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog();
+
+        doAnimalStuff(myAnimal);
+
+        com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog myDog
+                = new com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog();
+
+        doAnimalStuff(myDog);
     }
 
     private static void fileNotFoundExceptionHandling() throws FileNotFoundException {
@@ -283,6 +296,16 @@ public class InterviewQuestionsAndAnswersApplication {
 
     static void printThing(Printable thing) {
         thing.print("!", "!");
+    }
+
+    public static void doAnimalStuff(Animal animal) {
+        animal.makeNoise();
+        if(animal instanceof com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog){
+            com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog myDog
+                    = (com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog) animal;
+            myDog.growl();
+        }
+
     }
 
     public void sayHelloWorld() {
