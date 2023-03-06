@@ -15,6 +15,7 @@ import com.example.interviewquestionsandanswers.thisKeyword.Dog;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.io.FileNotFoundException;
 import java.util.*;
 
 @SpringBootApplication
@@ -53,7 +54,14 @@ public class InterviewQuestionsAndAnswersApplication {
 //        customException();
 //
 //        nullPointExceptionStuff();
+//
+//        fileNotFoundExceptionHandling();
 
+    }
+
+    private static void fileNotFoundExceptionHandling() throws FileNotFoundException {
+        FileNotFoundExceptionHandling handling = new FileNotFoundExceptionHandling();
+        handling.readFile("myFile.txt");
     }
 
     private static void nullPointExceptionStuff() {
