@@ -9,6 +9,8 @@ import com.example.interviewquestionsandanswers.annotationExampls.RunImmediately
 import com.example.interviewquestionsandanswers.annotationExampls.VeryImportant;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.ArrayListExample;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.LinkedListExample;
+import com.example.interviewquestionsandanswers.enumExample.Cereals;
+import com.example.interviewquestionsandanswers.enumExample.DaysOfTheWeek;
 import com.example.interviewquestionsandanswers.equalVsEquals.EqualDemo;
 import com.example.interviewquestionsandanswers.genericsExample.GenericsExample;
 import com.example.interviewquestionsandanswers.lambdaExample.Cat;
@@ -89,6 +91,26 @@ public class InterviewQuestionsAndAnswersApplication {
 //        recordExample();
 //
 //        constructMethod();
+//
+//        enumMethod();
+    }
+
+    private static void enumMethod() {
+        DaysOfTheWeek day = DaysOfTheWeek.TUESDAY;
+        System.out.println("day = " + day);
+
+        if (day == DaysOfTheWeek.TUESDAY) {
+            System.out.println("Yeah it's almost Friday");
+        }
+
+        for (DaysOfTheWeek myDay : DaysOfTheWeek.values()) {
+            System.out.println(myDay);
+        }
+
+        Cereals levelOfDelicious = Cereals.FROOT_LOOPS;
+        System.out.println
+                ("levelOfDelicious.getLevelOfDeliciousness() = "
+                        + levelOfDelicious.getLevelOfDeliciousness());
     }
 
     private static void constructMethod() {
