@@ -12,6 +12,7 @@ import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExmple2;
 import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
+import com.example.interviewquestionsandanswers.stringAreImmutable.StringImmutable;
 import com.example.interviewquestionsandanswers.thisKeyword.Dog;
 import com.example.interviewquestionsandanswers.upCastingAndDownCasting.Animal;
 import org.springframework.boot.SpringApplication;
@@ -62,6 +63,14 @@ public class InterviewQuestionsAndAnswersApplication {
 //        upCastingDownCasing();
 //
 //        equalSignAndMarksCheck();
+//
+//        stringsAreImmutable();
+
+    }
+
+    private static void stringsAreImmutable() {
+        StringImmutable stringImmutable = new StringImmutable();
+        stringImmutable.StringChecks();
     }
 
     private static void equalSignAndMarksCheck() {
