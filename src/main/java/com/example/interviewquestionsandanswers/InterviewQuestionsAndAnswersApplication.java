@@ -5,6 +5,7 @@ import com.example.interviewquestionsandanswers.SetAndHashSet.SetExample;
 import com.example.interviewquestionsandanswers.abstractVsInterface.*;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.ArrayListExample;
 import com.example.interviewquestionsandanswers.arrayListAndLinkedList.LinkedListExample;
+import com.example.interviewquestionsandanswers.equalVsEquals.EqualDemo;
 import com.example.interviewquestionsandanswers.lambdaExample.Cat;
 import com.example.interviewquestionsandanswers.lambdaExample.Printable;
 import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
@@ -59,6 +60,13 @@ public class InterviewQuestionsAndAnswersApplication {
 //        fileNotFoundExceptionHandling();
 //
 //        upCastingDownCasing();
+//
+//        equalSignAndMarksCheck();
+    }
+
+    private static void equalSignAndMarksCheck() {
+        EqualDemo equalDemo = new EqualDemo();
+        equalDemo.equalCheck();
     }
 
     private static void upCastingDownCasing() {
@@ -300,7 +308,7 @@ public class InterviewQuestionsAndAnswersApplication {
 
     public static void doAnimalStuff(Animal animal) {
         animal.makeNoise();
-        if(animal instanceof com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog){
+        if (animal instanceof com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog) {
             com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog myDog
                     = (com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog) animal;
             myDog.growl();
