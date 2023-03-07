@@ -104,7 +104,18 @@ public class InterviewQuestionsAndAnswersApplication {
 //        encapsulationMethod();
 //
 //        polymorphismMethod();
+//
+//        inheritanceMethod();
 
+    }
+
+    private static void inheritanceMethod() {
+        Mouse1 mouse1 = new Mouse1();
+        mouse1.leftClick();
+        Mouse2 mouse2 = new Mouse2();
+        mouse2.rightClick();
+        Mouse3 mouse3 = new Mouse3();
+        mouse3.scrollDown();
     }
 
     private static void polymorphismMethod() {
