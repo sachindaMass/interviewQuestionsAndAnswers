@@ -19,6 +19,7 @@ import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadEx
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExmple2;
 import com.example.interviewquestionsandanswers.oopExample.*;
 import com.example.interviewquestionsandanswers.optionalStuff.OptionalStuff;
+import com.example.interviewquestionsandanswers.queueExample.BBQ;
 import com.example.interviewquestionsandanswers.recordsExamples.EmployeeClass;
 import com.example.interviewquestionsandanswers.recordsExamples.EmployeeRecord;
 import com.example.interviewquestionsandanswers.reflectionExample.Chicken;
@@ -109,7 +110,14 @@ public class InterviewQuestionsAndAnswersApplication {
 //        inheritanceMethod();
 //
 //        stackMethod();
+//
+//        queueMethod();
 
+    }
+
+    private static void queueMethod() {
+        BBQ bbq = new BBQ();
+        bbq.queueMethod();
     }
 
     private static void stackMethod() {
