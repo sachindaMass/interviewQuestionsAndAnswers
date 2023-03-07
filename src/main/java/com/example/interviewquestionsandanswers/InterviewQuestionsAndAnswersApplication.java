@@ -17,10 +17,7 @@ import com.example.interviewquestionsandanswers.lambdaExample.Printable;
 import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExmple2;
-import com.example.interviewquestionsandanswers.oopExample.B;
-import com.example.interviewquestionsandanswers.oopExample.Honda;
-import com.example.interviewquestionsandanswers.oopExample.InterFaceExample;
-import com.example.interviewquestionsandanswers.oopExample.Pen;
+import com.example.interviewquestionsandanswers.oopExample.*;
 import com.example.interviewquestionsandanswers.optionalStuff.OptionalStuff;
 import com.example.interviewquestionsandanswers.recordsExamples.EmployeeClass;
 import com.example.interviewquestionsandanswers.recordsExamples.EmployeeRecord;
@@ -103,7 +100,15 @@ public class InterviewQuestionsAndAnswersApplication {
 //        abstractionMethod();
 //
 //        InterFaceMethod();
+//
+//        encapsulationMethod();
 
+    }
+
+    private static void encapsulationMethod() {
+        DogEncapsulation dog = new DogEncapsulation();
+        dog.setAge(15);
+        System.out.println(dog.getAge());
     }
 
     private static void InterFaceMethod() {
