@@ -23,6 +23,7 @@ import com.example.interviewquestionsandanswers.recordsExamples.EmployeeClass;
 import com.example.interviewquestionsandanswers.recordsExamples.EmployeeRecord;
 import com.example.interviewquestionsandanswers.reflectionExample.Chicken;
 import com.example.interviewquestionsandanswers.setAndHashSet.SetExample;
+import com.example.interviewquestionsandanswers.stackExample.StackExample;
 import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
 import com.example.interviewquestionsandanswers.stringAreImmutable.StringImmutable;
 import com.example.interviewquestionsandanswers.thisKeyword.Dog;
@@ -106,7 +107,14 @@ public class InterviewQuestionsAndAnswersApplication {
 //        polymorphismMethod();
 //
 //        inheritanceMethod();
+//
+//        stackMethod();
 
+    }
+
+    private static void stackMethod() {
+        StackExample stackExample = new StackExample();
+        stackExample.stackMethod();
     }
 
     private static void inheritanceMethod() {
