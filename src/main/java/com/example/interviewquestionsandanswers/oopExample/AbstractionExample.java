@@ -5,7 +5,7 @@
  */
 package com.example.interviewquestionsandanswers.oopExample;
 
-public abstract class abstractionExample {
+public abstract class AbstractionExample {
 
 //    Abstraction is the process of hiding the internal details of an application from the outer world.
 //    abstract class

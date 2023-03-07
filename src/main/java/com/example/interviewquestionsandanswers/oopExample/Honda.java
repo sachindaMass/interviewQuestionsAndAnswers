@@ -5,7 +5,7 @@
  */
 package com.example.interviewquestionsandanswers.oopExample;
 
-public class Honda extends abstractionExample {
+public class Honda extends AbstractionExample {
 
     @Override
     public void run() {

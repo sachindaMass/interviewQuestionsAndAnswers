@@ -102,7 +102,18 @@ public class InterviewQuestionsAndAnswersApplication {
 //        InterFaceMethod();
 //
 //        encapsulationMethod();
+//
+//        polymorphismMethod();
 
+    }
+
+    private static void polymorphismMethod() {
+        PolymorphismExample polymorphismExample = new PolymorphismExample();
+        polymorphismExample.eat();
+
+        DogPolymoreExample dogPolymoreExample = new DogPolymoreExample();
+        dogPolymoreExample.eat();
+        dogPolymoreExample.eat(3);
     }
 
     private static void encapsulationMethod() {
