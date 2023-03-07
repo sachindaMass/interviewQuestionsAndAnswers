@@ -1,7 +1,7 @@
 /*
  * @created 07/03/2023 - 2:34 PM
  * @project interviewQuestionsAndAnswers
- * @author  Dell-PC
+ * @author  Sachinda-Marasinghe
  */
 package com.example.interviewquestionsandanswers.unitTestingExample;
 

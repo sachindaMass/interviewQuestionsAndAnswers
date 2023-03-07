@@ -1,7 +1,5 @@
 package com.example.interviewquestionsandanswers;
 
-import com.example.interviewquestionsandanswers.exceptionHandling.*;
-import com.example.interviewquestionsandanswers.setAndHashSet.SetExample;
 import com.example.interviewquestionsandanswers.abstractVsInterface.*;
 import com.example.interviewquestionsandanswers.annotationExampls.ImportantString;
 import com.example.interviewquestionsandanswers.annotationExampls.Parrot;
@@ -12,16 +10,22 @@ import com.example.interviewquestionsandanswers.arrayListAndLinkedList.LinkedLis
 import com.example.interviewquestionsandanswers.enumExample.Cereals;
 import com.example.interviewquestionsandanswers.enumExample.DaysOfTheWeek;
 import com.example.interviewquestionsandanswers.equalVsEquals.EqualDemo;
+import com.example.interviewquestionsandanswers.exceptionHandling.*;
 import com.example.interviewquestionsandanswers.genericsExample.GenericsExample;
 import com.example.interviewquestionsandanswers.lambdaExample.Cat;
 import com.example.interviewquestionsandanswers.lambdaExample.Printable;
 import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExample;
 import com.example.interviewquestionsandanswers.multithreadExample.MultiThreadExmple2;
+import com.example.interviewquestionsandanswers.oopExample.B;
+import com.example.interviewquestionsandanswers.oopExample.Honda;
+import com.example.interviewquestionsandanswers.oopExample.InterFaceExample;
+import com.example.interviewquestionsandanswers.oopExample.Pen;
 import com.example.interviewquestionsandanswers.optionalStuff.OptionalStuff;
 import com.example.interviewquestionsandanswers.recordsExamples.EmployeeClass;
 import com.example.interviewquestionsandanswers.recordsExamples.EmployeeRecord;
 import com.example.interviewquestionsandanswers.reflectionExample.Chicken;
+import com.example.interviewquestionsandanswers.setAndHashSet.SetExample;
 import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
 import com.example.interviewquestionsandanswers.stringAreImmutable.StringImmutable;
 import com.example.interviewquestionsandanswers.thisKeyword.Dog;
@@ -93,6 +97,36 @@ public class InterviewQuestionsAndAnswersApplication {
 //        constructMethod();
 //
 //        enumMethod();
+//
+//        classesAndObjectMethod();
+//
+//        abstractionMethod();
+//
+//        InterFaceMethod();
+
+    }
+
+    private static void InterFaceMethod() {
+        InterFaceExample interFaceExample = new B();
+        interFaceExample.a();
+        interFaceExample.b();
+        interFaceExample.c();
+        interFaceExample.d();
+    }
+
+    private static void abstractionMethod() {
+        Honda honda = new Honda();
+        honda.run();
+    }
+
+    private static void classesAndObjectMethod() {
+        Pen pen = new Pen();
+        pen.testSystemOutPrintln();
+        System.out.println("pen.getColor() = " + pen.getColor());
+        System.out.println("pen.getPoint() = " + pen.getPoint());
+        System.out.println("pen.getType() = " + pen.getType());
+        System.out.println("pen.penClick() = " + pen.penClick());
+        System.out.println("pen.unClicked() = " + pen.unClicked());
     }
 
     private static void enumMethod() {
