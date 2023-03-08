@@ -26,6 +26,7 @@ import com.example.interviewquestionsandanswers.reflectionExample.Chicken;
 import com.example.interviewquestionsandanswers.setAndHashSet.SetExample;
 import com.example.interviewquestionsandanswers.stackExample.StackExample;
 import com.example.interviewquestionsandanswers.staticAndNonStatic.Book;
+import com.example.interviewquestionsandanswers.streamExample.StreamExample;
 import com.example.interviewquestionsandanswers.stringAreImmutable.StringImmutable;
 import com.example.interviewquestionsandanswers.thisKeyword.Dog;
 import com.example.interviewquestionsandanswers.upCastingAndDownCasting.Animal;
@@ -37,6 +38,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @SpringBootApplication
 public class InterviewQuestionsAndAnswersApplication {
@@ -112,7 +114,41 @@ public class InterviewQuestionsAndAnswersApplication {
 //        stackMethod();
 //
 //        queueMethod();
+//
+//        sortedExample();
 
+
+    }
+
+    private static void sortedExample() {
+        List<StreamExample> streamExample = new ArrayList<>();
+
+        streamExample.add(new StreamExample("Sachinda Marasinghe", 120));
+        streamExample.add(new StreamExample("Sachinda Mass", 150));
+        streamExample.add(new StreamExample("Bill Gates", 100));
+        streamExample.add(new StreamExample("Mark Zuckerberg", 100));
+
+//        List<StreamExample> hundredClub = new ArrayList<>();
+//
+//        for (StreamExample s : streamExample) {
+//            if (s.getBillions() >= 100) {
+//                hundredClub.add(s);
+//            }
+//        }
+
+        List<StreamExample> sortedList = streamExample.stream()
+                .sorted(Comparator.comparing(streamExample1 -> streamExample1.name))
+                .collect(Collectors.toList());
+
+        List<StreamExample> hundredClub = streamExample.stream()
+                .filter(streamExample1 -> streamExample1.getBillions() >= 100)
+                .collect(Collectors.toList());
+
+        System.out.println("hundredClub = " + hundredClub);
+
+        System.out.println("sortedList = " + sortedList);
+
+//        hundredClub.forEach(streamExample1 -> System.out.println(streamExample1.getName()));
     }
 
     private static void queueMethod() {
