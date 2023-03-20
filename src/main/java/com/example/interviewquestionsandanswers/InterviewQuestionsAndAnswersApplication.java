@@ -12,6 +12,7 @@ import com.example.interviewquestionsandanswers.enumExample.DaysOfTheWeek;
 import com.example.interviewquestionsandanswers.equalVsEquals.EqualDemo;
 import com.example.interviewquestionsandanswers.exceptionHandling.*;
 import com.example.interviewquestionsandanswers.genericsExample.GenericsExample;
+import com.example.interviewquestionsandanswers.javaBasics.dataTypesAndVaribles.DataTypesExample;
 import com.example.interviewquestionsandanswers.lambdaExample.Cat;
 import com.example.interviewquestionsandanswers.lambdaExample.Printable;
 import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
@@ -117,8 +118,20 @@ public class InterviewQuestionsAndAnswersApplication {
 //
 //        sortedExample();
 
+        dataTypeExample();
+
 
     }
+
+    public static void dataTypeExample() {
+        DataTypesExample dataTypesExample = new DataTypesExample();
+        dataTypesExample.intDataType();
+        dataTypesExample.doubleDataType();
+        dataTypesExample.booleanDataType();
+        dataTypesExample.stringDataType();
+        dataTypesExample.charDataType();
+    }
+
 
     private static void sortedExample() {
         List<StreamExample> streamExample = new ArrayList<>();
@@ -589,9 +602,7 @@ public class InterviewQuestionsAndAnswersApplication {
 
     public static void doAnimalStuff(Animal animal) {
         animal.makeNoise();
-        if (animal instanceof com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog) {
-            com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog myDog
-                    = (com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog) animal;
+        if (animal instanceof com.example.interviewquestionsandanswers.upCastingAndDownCasting.Dog myDog) {
             myDog.growl();
         }
 
