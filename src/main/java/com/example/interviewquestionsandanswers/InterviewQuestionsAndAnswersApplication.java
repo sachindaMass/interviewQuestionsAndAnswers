@@ -12,10 +12,7 @@ import com.example.interviewquestionsandanswers.enumExample.DaysOfTheWeek;
 import com.example.interviewquestionsandanswers.equalVsEquals.EqualDemo;
 import com.example.interviewquestionsandanswers.exceptionHandling.*;
 import com.example.interviewquestionsandanswers.genericsExample.GenericsExample;
-import com.example.interviewquestionsandanswers.javaBasics.dataTypesAndVaribles.DataTypesExample;
-import com.example.interviewquestionsandanswers.javaBasics.dataTypesAndVaribles.FeaturesAndArchitecture;
-import com.example.interviewquestionsandanswers.javaBasics.dataTypesAndVaribles.OperatorAndExpressions;
-import com.example.interviewquestionsandanswers.javaBasics.dataTypesAndVaribles.StringClassExample;
+import com.example.interviewquestionsandanswers.javaBasics.*;
 import com.example.interviewquestionsandanswers.lambdaExample.Cat;
 import com.example.interviewquestionsandanswers.lambdaExample.Printable;
 import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
@@ -126,9 +123,18 @@ public class InterviewQuestionsAndAnswersApplication {
 //        FeaturesAndArchitectureExample();
 //
 //        OperatorAndExpressionExample();
+//
+//        StringExample();
+//
+//        conditionalAndLoopsExample();
 
-        StringExample();
+    }
 
+    private static void conditionalAndLoopsExample() {
+        ConditionalAndLoops obj = new ConditionalAndLoops();
+        obj.oddOrEven();
+        obj.largestThreeNumbers();
+        obj.oneToTenNumbers();
     }
 
     private static void StringExample() {
@@ -140,7 +146,7 @@ public class InterviewQuestionsAndAnswersApplication {
         obj.splitString();
     }
 
-    public static void OperatorAndExpressionExample() {
+    private static void OperatorAndExpressionExample() {
         OperatorAndExpressions obj = new OperatorAndExpressions();
         obj.additionExample();
         obj.multiplicationExample();
@@ -149,7 +155,7 @@ public class InterviewQuestionsAndAnswersApplication {
         obj.ternaryOperatorsExample();
     }
 
-    public static void FeaturesAndArchitectureExample() {
+    private static void FeaturesAndArchitectureExample() {
         FeaturesAndArchitecture obj = new FeaturesAndArchitecture();
         obj.setMessage("Hello World");
         System.out.println(obj.getMessage());
@@ -161,7 +167,7 @@ public class InterviewQuestionsAndAnswersApplication {
 
     }
 
-    public static void dataTypeExample() {
+    private static void dataTypeExample() {
         DataTypesExample dataTypesExample = new DataTypesExample();
         dataTypesExample.intDataType();
         dataTypesExample.doubleDataType();

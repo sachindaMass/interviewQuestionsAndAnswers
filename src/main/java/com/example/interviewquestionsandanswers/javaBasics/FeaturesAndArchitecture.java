@@ -1,4 +1,4 @@
-package com.example.interviewquestionsandanswers.javaBasics.dataTypesAndVaribles;
+package com.example.interviewquestionsandanswers.javaBasics;
 
 public class FeaturesAndArchitecture {
     //    Write a Java program that demonstrates encapsulation.

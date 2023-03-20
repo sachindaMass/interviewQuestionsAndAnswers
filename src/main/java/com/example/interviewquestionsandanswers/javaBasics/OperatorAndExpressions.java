@@ -1,4 +1,4 @@
-package com.example.interviewquestionsandanswers.javaBasics.dataTypesAndVaribles;
+package com.example.interviewquestionsandanswers.javaBasics;
 
 public class OperatorAndExpressions {
     //    Write a Java program to perform addition of two numbers.

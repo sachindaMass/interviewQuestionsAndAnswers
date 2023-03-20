@@ -1,4 +1,4 @@
-package com.example.interviewquestionsandanswers.javaBasics.dataTypesAndVaribles;
+package com.example.interviewquestionsandanswers.javaBasics;
 
 
 public class DataTypesExample {
