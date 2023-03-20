@@ -117,8 +117,8 @@ public class InterviewQuestionsAndAnswersApplication {
 //        queueMethod();
 //
 //        sortedExample();
-
-        dataTypeExample();
+//
+//        dataTypeExample();
 
 
     }
