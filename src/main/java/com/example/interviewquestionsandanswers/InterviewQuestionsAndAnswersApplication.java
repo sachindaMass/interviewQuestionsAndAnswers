@@ -14,6 +14,7 @@ import com.example.interviewquestionsandanswers.exceptionHandling.*;
 import com.example.interviewquestionsandanswers.genericsExample.GenericsExample;
 import com.example.interviewquestionsandanswers.javaBasics.dataTypesAndVaribles.DataTypesExample;
 import com.example.interviewquestionsandanswers.javaBasics.dataTypesAndVaribles.FeaturesAndArchitecture;
+import com.example.interviewquestionsandanswers.javaBasics.dataTypesAndVaribles.OperatorAndExpressions;
 import com.example.interviewquestionsandanswers.lambdaExample.Cat;
 import com.example.interviewquestionsandanswers.lambdaExample.Printable;
 import com.example.interviewquestionsandanswers.mapAndHashMap.MapsExample;
@@ -123,6 +124,17 @@ public class InterviewQuestionsAndAnswersApplication {
 //
 //        FeaturesAndArchitectureExample();
 
+        OperatorAndExpressionExample();
+
+    }
+
+    public static void OperatorAndExpressionExample() {
+        OperatorAndExpressions obj = new OperatorAndExpressions();
+        obj.additionExample();
+        obj.multiplicationExample();
+        obj.andOperationExample();
+        obj.orOperationExample();
+        obj.ternaryOperatorsExample();
     }
 
     public static void FeaturesAndArchitectureExample() {
