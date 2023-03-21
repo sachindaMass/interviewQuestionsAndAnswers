@@ -127,8 +127,18 @@ public class InterviewQuestionsAndAnswersApplication {
 //        StringExample();
 //
 //        conditionalAndLoopsExample();
+//
+//        oopConceptDepth();
 
-        oopConceptDepth();
+        multiThread();
+    }
+
+    private static void multiThread() {
+        MultiThreading obj = new MultiThreading();
+        obj.createThread();
+        obj.implementSynchronization();
+        obj.deadLockJava();
+        obj.waitAndSleep();
     }
 
     private static void oopConceptDepth() {
