@@ -125,9 +125,18 @@ public class InterviewQuestionsAndAnswersApplication {
 //        OperatorAndExpressionExample();
 //
 //        StringExample();
+//
+//        conditionalAndLoopsExample();
 
-        conditionalAndLoopsExample();
+        oopConceptDepth();
+    }
 
+    private static void oopConceptDepth() {
+        OOPConceptInDepth obj = new OOPConceptInDepth();
+        obj.encapsulationExample();
+        obj.inheritanceExample();
+        obj.polymorphismExample();
+        obj.abstractionExample();
     }
 
     private static void conditionalAndLoopsExample() {
