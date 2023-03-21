@@ -129,8 +129,19 @@ public class InterviewQuestionsAndAnswersApplication {
 //        conditionalAndLoopsExample();
 //
 //        oopConceptDepth();
+//
+//        multiThread();
 
-        multiThread();
+        javaIO();
+
+    }
+
+    private static void javaIO() {
+        JavaIOStream obj = new JavaIOStream();
+        obj.readDataFromAFile();
+        obj.writeDataFile();
+        obj.serializationJava();
+        obj.deserializeJava();
     }
 
     private static void multiThread() {
