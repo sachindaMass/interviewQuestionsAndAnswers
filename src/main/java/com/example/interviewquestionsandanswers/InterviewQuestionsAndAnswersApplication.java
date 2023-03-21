@@ -125,8 +125,8 @@ public class InterviewQuestionsAndAnswersApplication {
 //        OperatorAndExpressionExample();
 //
 //        StringExample();
-//
-//        conditionalAndLoopsExample();
+
+        conditionalAndLoopsExample();
 
     }
 
@@ -135,6 +135,11 @@ public class InterviewQuestionsAndAnswersApplication {
         obj.oddOrEven();
         obj.largestThreeNumbers();
         obj.oneToTenNumbers();
+        obj.ifAndSwitch();
+        obj.whileLoopAndDoWhile();
+        obj.forLoopAndForeachLoop();
+        obj.exitLoop();
+        obj.skipOfLoop();
     }
 
     private static void StringExample() {
