@@ -50,6 +50,7 @@ public class InterviewQuestionsAndAnswersApplication {
     public static void main(String[] args) throws Exception {
         SpringApplication.run(InterviewQuestionsAndAnswersApplication.class, args);
 
+
 //        abstractAndInterface();
 //
 //        staticAndNonStatic();
@@ -133,8 +134,8 @@ public class InterviewQuestionsAndAnswersApplication {
 //        multiThread();
 //
 //        javaIO();
-
-        arrayExample();
+//
+//        arrayExample();
 
     }
 
