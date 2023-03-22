@@ -1,5 +1,7 @@
 package com.example.interviewquestionsandanswers.javaBasics;
 
+import java.util.Scanner;
+
 public class StringClassExample {
 
     //    Write a Java program to concatenate two strings.
@@ -43,4 +45,26 @@ public class StringClassExample {
             System.out.println(s.trim());
         }
     }
+
+//    write a program to reverse a String
+
+//    import java.util.Scanner;
+//
+//    public class StringReversal {
+//        public static void main(String[] args) {
+//            Scanner input = new Scanner(System.in);
+//            System.out.print("Enter a string: ");
+//            String str = input.nextLine();
+//            String reversed = reverseString(str);
+//            System.out.println("Reversed string: " + reversed);
+//        }
+//
+//        public static String reverseString(String str) {
+//            StringBuilder sb = new StringBuilder(str);
+//            sb.reverse();
+//            return sb.toString();
+//        }
+//    }
+
+
 }
