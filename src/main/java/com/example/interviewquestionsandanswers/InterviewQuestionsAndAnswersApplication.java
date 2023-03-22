@@ -131,9 +131,19 @@ public class InterviewQuestionsAndAnswersApplication {
 //        oopConceptDepth();
 //
 //        multiThread();
+//
+//        javaIO();
 
-        javaIO();
+        arrayExample();
 
+    }
+
+    public static void arrayExample() {
+        ArrayClassExample obj = new ArrayClassExample();
+        obj.findSecondSmallest(new int[]{1, 2, 3, 4, 5});
+        obj.sortingDescending(new int[]{6, 4, 10, 78, 64, 56});
+        obj.removeDuplicates(new String[]{"Hello"});
+        obj.reverseArray(new int[]{6, 4, 10, 78, 64, 56});
     }
 
     private static void javaIO() {
