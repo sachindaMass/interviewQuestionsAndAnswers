@@ -137,6 +137,14 @@ public class InterviewQuestionsAndAnswersApplication {
 //
 //        arrayExample();
 
+        interviewQuestion();
+
+    }
+
+    public static void interviewQuestion() {
+        WonderSoftwareEngineer obj = new WonderSoftwareEngineer();
+        obj.reverseString("Hello");
+
     }
 
     public static void arrayExample() {
